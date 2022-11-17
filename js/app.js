@@ -6,11 +6,13 @@ var swLocation = '../sw.js';
 
 //Registro el SW
 if (navigator.serviceWorker) {
-
+    console.log('ENTRO AL IF')
+    console.log(url);
     if ( url.includes('localhost')) {
+        console.log('ENTRO AL IF 2');
         swLocation = '/sw.js';
     }
-
+    console.log('Valor de swLocaion: ' + swLocation);
     navigator.serviceWorker.register( swLocation );
 }
 
