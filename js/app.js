@@ -2,14 +2,14 @@
 Validamos la URL para ver si estoy en DEV (localhost) o en PROD (github.pages)
  */
 var url = window.location.href;
-var swLocation = '../sw.js';
+var swLocation = '/sw.js';
 
 //Registro el SW
 if (navigator.serviceWorker) {
 
-    if ( url.includes('localhost') {
+    if ( url.includes('localhost')) {
         swLocation = '/sw.js';
-    })
+    }
 
     navigator.serviceWorker.register( swLocation );
 }
