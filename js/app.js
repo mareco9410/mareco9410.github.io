@@ -1,18 +1,17 @@
 /*
 Validamos la URL para ver si estoy en DEV (localhost) o en PROD (github.pages)
  */
-var url = window.location.href;
-var swLocation = '/sw.js';
+//var url = window.location.href;
+//var swLocation = '/sw.js';
 
 //Registro el SW
 if (navigator.serviceWorker) {
-    console.log('ENTRO AL IF')
-    console.log(url);
-    if ( url.includes('localhost')) {
-        console.log('ENTRO AL IF 2')
+
+ //   if ( url.includes('localhost')) {
+
         swLocation = '/sw.js';
-    }
-    console.log('Valor de swLocaion: ' + swLocation);
+ //   }
+
     navigator.serviceWorker.register( swLocation );
 }
 
