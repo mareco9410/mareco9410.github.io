@@ -2,7 +2,7 @@
 Validamos la URL para ver si estoy en DEV (localhost) o en PROD (github.pages)
  */
 var url = window.location.href;
-var swLocation = 'https://mareco9410.github.io/sw.js';
+var swLocation = '/sw.js';
 
 //Registro el SW
 if (navigator.serviceWorker) {
