@@ -1,7 +1,17 @@
-//Registro el SW
+/*
+Validamos la URL para ver si estoy en DEV (localhost) o en PROD (github.pages)
+ */
+var url = window.location.href;
+var swLocation = 'https://mareco9410.github.io/sw.js';
 
+//Registro el SW
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js');
+
+    if ( url.includes('localhost') {
+        swLocation = '/sw.js';
+    })
+
+    navigator.serviceWorker.register( swLocation );
 }
 
 // Referencias de jQuery
